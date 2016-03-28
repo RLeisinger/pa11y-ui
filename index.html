@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>we need a new page to display some pa11y services
+</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <body>
+    <div>
+They live here.
+        
+        http://54.153.37.249:3000/tasks
+
+Then, you can drop an ID into the call after that
+http://54.153.37.249:3000/tasks/56d9ce02f50dd28402b7e9d8
+
+
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("data/pa11y.js", function(result){
+            $.each(result, function(i, field){
+                $("div").append(field + " ");
+            });
+        });
+    });
+});
+</script>
+</head>
+        
+<body>
+<p>
+<button>Get JSON data</button>
+
+<div></div>
+
+</body>
+</HTML>
